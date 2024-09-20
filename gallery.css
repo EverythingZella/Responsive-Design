@@ -16,27 +16,28 @@ a {
 }
 
 p {
- font-size: 25px;
- font-family: Arial, sans-serif;
-}
-
-img {
-  width: 100%;
-}
-
-p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
   text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center items */
 }
 
 div img {
   width: 150px;
-  height: 150px;
+  height: auto; /* Maintain aspect ratio */
   display: block;
   margin: auto;
 }
 
 div {
-  display: block;
+  display: flex; /* Change to flex */
+  flex-direction: column; /* Stack image and label */
+  align-items: center; /* Center content horizontally */
   width: 100%;
   margin: 5px;
   padding: 2px;
@@ -46,7 +47,6 @@ div {
 @media screen and (min-width: 772px) {
   div {
       width: 45vw; /* Set width to 45% of the viewport */
-      display: inline-block; /* Ensure divs are next to each other */
   }
 
   div img {
@@ -54,16 +54,13 @@ div {
   }
 }
 
-
 /* Large Screen View */
 @media screen and (min-width: 998px) {
   div {
       width: 30vw; /* Set width to 30% of the viewport */
-      display: inline-block;
   }
 
   div img {
       max-height: 30vh; /* Retain the max height for images */
   }
 }
-
